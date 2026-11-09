@@ -1,0 +1,130 @@
+[
+  {
+    "slug": "semaglutide",
+    "name": "Semaglutide",
+    "fullName": "Compounded Semaglutide",
+    "category": "Personalized Medical Weight Management",
+    "heroIntro": "Explore treatment options with licensed healthcare providers.",
+    "cardBlurb": "A GLP-1 option that may support weight management when prescribed by a licensed provider.",
+    "vialLabel": ["Semaglutide", "Injection"],
+    "pricing": [
+      { "months": 1, "perMonth": 179 },
+      { "months": 3, "perMonth": 160 },
+      { "months": 6, "perMonth": 135 }
+    ],
+    "what": [
+      "Semaglutide is a glucagon-like peptide-1 (GLP-1) receptor agonist that acts on receptors involved in appetite regulation and blood glucose control.",
+      "Compounded semaglutide is a prescription medication prepared by a licensed compounding pharmacy for an individual patient when prescribed by a healthcare provider.",
+      "Compounded semaglutide is not FDA-approved and is not an FDA-approved generic equivalent of any brand-name medication."
+    ],
+    "photo": "couple-sema",
+    "photoAlt": "Smiling middle-aged couple outdoors in warm sunlight",
+    "isi": {
+      "boxed": "In studies in rodents, semaglutide caused thyroid C-cell tumors. It is not known whether semaglutide causes thyroid C-cell tumors, including medullary thyroid carcinoma (MTC), in humans. Do not use semaglutide if you or any of your family members have ever had MTC, or if you have Multiple Endocrine Neoplasia syndrome type 2 (MEN 2). Tell your healthcare provider right away if you develop a lump or swelling in your neck, hoarseness, trouble swallowing, or shortness of breath.",
+      "doNotUse": [
+        "You or a family member have ever had medullary thyroid carcinoma (MTC), or you have Multiple Endocrine Neoplasia syndrome type 2 (MEN 2).",
+        "You have had a serious allergic reaction to semaglutide or any of the ingredients in your medication.",
+        "You are using another product that contains semaglutide or another GLP-1 receptor agonist."
+      ],
+      "serious": [
+        "Inflammation of the pancreas (pancreatitis). Stop using and call your provider right away if you have severe stomach pain that will not go away, with or without vomiting.",
+        "Gallbladder problems, including gallstones.",
+        "Low blood sugar (hypoglycemia), particularly when used with insulin or a sulfonylurea.",
+        "Kidney problems, including kidney failure, which can be caused by dehydration from nausea, vomiting, or diarrhea.",
+        "Severe gastrointestinal reactions.",
+        "Serious allergic reactions, including swelling of the face, lips, tongue, or throat, trouble breathing, or severe rash.",
+        "Changes in vision in people with type 2 diabetes.",
+        "Increased heart rate.",
+        "Depression or thoughts of suicide. Call your provider right away if you have new or worsening mood changes.",
+        "Food or liquid getting into the lungs during surgery or procedures that use anesthesia or deep sedation. Tell all of your providers that you use semaglutide before any procedure."
+      ],
+      "common": "nausea, vomiting, diarrhea, constipation, abdominal pain, headache, fatigue, upset stomach, dizziness, bloating, belching, gas, and heartburn.",
+      "pregnancy": "Tell your provider if you are pregnant, plan to become pregnant, or are breastfeeding. Semaglutide may harm an unborn baby."
+    },
+    "faqs": [
+      {
+        "q": "Is compounded semaglutide FDA-approved?",
+        "a": "No. Compounded semaglutide is not FDA-approved. The FDA does not review compounded medications for safety, effectiveness, or quality before they are marketed. It is prepared by a licensed compounding pharmacy for an individual patient based on a valid prescription."
+      },
+      {
+        "q": "Do I need a prescription?",
+        "a": "Yes. Compounded semaglutide is available only with a prescription from a licensed healthcare provider, and only when the provider determines that treatment is medically appropriate for you."
+      },
+      {
+        "q": "How long does it take to receive my medication?",
+        "a": "Timing depends on your provider review and pharmacy processing. If you are prescribed treatment, your care team will share an estimated delivery date once your prescription has been processed."
+      },
+      {
+        "q": "Can my dosage change during treatment?",
+        "a": "Yes. Your provider may adjust your dose over time based on how you respond and any side effects you experience. Do not change your dose without talking to your provider first."
+      },
+      {
+        "q": "What if I experience side effects?",
+        "a": "Contact your care team about any side effects. If you have severe stomach pain that will not go away, signs of a serious allergic reaction, or any other severe symptoms, call 911 or seek emergency care right away. See the Important Safety Information on this page for more details."
+      }
+    ]
+  },
+  {
+    "slug": "tirzepatide",
+    "name": "Tirzepatide",
+    "fullName": "Compounded Tirzepatide",
+    "category": "Personalized Medical Weight Management",
+    "heroIntro": "Explore compounded tirzepatide as a potential treatment option through a licensed healthcare provider.",
+    "cardBlurb": "A dual-acting treatment option that may support weight management when prescribed by a licensed provider.",
+    "vialLabel": ["Tirzepatide", "Injection"],
+    "pricing": [
+      { "months": 1, "perMonth": 179 },
+      { "months": 3, "perMonth": 160 },
+      { "months": 6, "perMonth": 135 }
+    ],
+    "what": [
+      "Tirzepatide is a prescription medication that acts on two hormone receptor pathways (GIP and GLP-1) involved in appetite regulation and metabolic health.",
+      "Compounded tirzepatide is prepared by a licensed compounding pharmacy for an individual patient when prescribed by a healthcare provider.",
+      "Compounded tirzepatide is not FDA-approved and is not an FDA-approved generic equivalent of any brand-name medication."
+    ],
+    "photo": "couple-tirz",
+    "photoAlt": "Smiling middle-aged couple standing together outdoors",
+    "isi": {
+      "boxed": "In studies in rodents, tirzepatide caused thyroid C-cell tumors. It is not known whether tirzepatide causes thyroid C-cell tumors, including medullary thyroid carcinoma (MTC), in humans. Do not use tirzepatide if you or any of your family members have ever had MTC, or if you have Multiple Endocrine Neoplasia syndrome type 2 (MEN 2). Tell your healthcare provider right away if you develop a lump or swelling in your neck, hoarseness, trouble swallowing, or shortness of breath.",
+      "doNotUse": [
+        "You or a family member have ever had medullary thyroid carcinoma (MTC), or you have Multiple Endocrine Neoplasia syndrome type 2 (MEN 2).",
+        "You have had a serious allergic reaction to tirzepatide or any of the ingredients in your medication.",
+        "You are using another product that contains tirzepatide or a GLP-1 receptor agonist."
+      ],
+      "serious": [
+        "Inflammation of the pancreas (pancreatitis). Stop using and call your provider right away if you have severe stomach pain that will not go away, with or without vomiting.",
+        "Gallbladder problems, including gallstones.",
+        "Low blood sugar (hypoglycemia), particularly when used with insulin or a sulfonylurea.",
+        "Kidney problems, including kidney failure, which can be caused by dehydration from nausea, vomiting, or diarrhea.",
+        "Severe gastrointestinal reactions.",
+        "Serious allergic reactions, including swelling of the face, lips, tongue, or throat, trouble breathing, or severe rash.",
+        "Depression or thoughts of suicide. Call your provider right away if you have new or worsening mood changes.",
+        "Food or liquid getting into the lungs during surgery or procedures that use anesthesia or deep sedation. Tell all of your providers that you use tirzepatide before any procedure."
+      ],
+      "common": "nausea, diarrhea, vomiting, constipation, abdominal discomfort, indigestion, injection-site reactions, fatigue, allergic reactions, belching, hair loss, and heartburn.",
+      "pregnancy": "Tell your provider if you are pregnant, plan to become pregnant, or are breastfeeding. Tirzepatide may harm an unborn baby. Birth control pills taken by mouth may not work as well while using tirzepatide; your provider may recommend a non-oral method for 4 weeks after you start and for 4 weeks after each dose increase."
+    },
+    "faqs": [
+      {
+        "q": "Is compounded tirzepatide FDA-approved?",
+        "a": "No. Compounded tirzepatide is not FDA-approved. The FDA does not review compounded medications for safety, effectiveness, or quality before they are marketed. It is prepared by a licensed compounding pharmacy for an individual patient based on a valid prescription."
+      },
+      {
+        "q": "Do I need a prescription?",
+        "a": "Yes. Compounded tirzepatide is available only with a prescription from a licensed healthcare provider, and only when the provider determines that treatment is medically appropriate for you."
+      },
+      {
+        "q": "How long does it take to receive my medication?",
+        "a": "Timing depends on your provider review and pharmacy processing. If you are prescribed treatment, your care team will share an estimated delivery date once your prescription has been processed."
+      },
+      {
+        "q": "Can my dosage change during treatment?",
+        "a": "Yes. Your provider may adjust your dose over time based on how you respond and any side effects you experience. Do not change your dose without talking to your provider first."
+      },
+      {
+        "q": "What if I experience side effects?",
+        "a": "Contact your care team about any side effects. If you have severe stomach pain that will not go away, signs of a serious allergic reaction, or any other severe symptoms, call 911 or seek emergency care right away. See the Important Safety Information on this page for more details."
+      }
+    ]
+  }
+]
