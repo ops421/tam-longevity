@@ -69,29 +69,26 @@ We may send administrative and service messages relating to accounts, appointmen
 
 You may unsubscribe from promotional emails using the unsubscribe link included in those emails. You may opt out of promotional SMS messages by replying STOP to the sending number, where supported, by calling 888-423-5988, or by emailing info@tamlongevity.com. Reply HELP where supported for assistance. Message frequency varies; message and data rates may apply. Opting out of promotional communications will not necessarily stop important nonmarketing service messages permitted by law. We do not use PHI for marketing without any authorization required under HIPAA, and we do not include sensitive medical details in promotional messages without appropriate authorization and safeguards. SMS and ordinary email may not be secure channels for medical information.
 
-## 9. Data Retention
-We retain personal information only as long as reasonably necessary for the purposes described in this policy, including providing Services, meeting applicable medical and pharmacy recordkeeping requirements, resolving disputes, preventing fraud, and complying with law. Retention periods vary by information category and applicable legal obligations. When information is no longer required, we take reasonable steps to delete, de-identify, or securely dispose of it.
-
-## 10. Information Security
+## 9. Information Security
 We use reasonable administrative, technical, and physical safeguards appropriate to the nature of the information we handle. No website, electronic communication, or data storage system is completely secure. You are responsible for safeguarding your account credentials and promptly reporting suspected unauthorized access.
 
-## 11. Your Privacy Rights and Choices
+## 10. Your Privacy Rights and Choices
 Depending on your state of residence and the law that applies, you may have rights to request access to, correction of, deletion of, or a copy of certain personal information; to opt out of certain targeted advertising, sales, or profiling; to limit or withdraw consent for certain uses of sensitive or consumer health data; and to appeal certain privacy-rights decisions.
 
 You may submit a privacy request by calling 888-423-5988, emailing info@tamlongevity.com, or writing to the mailing address below. We will update this policy if an online request form is established. We may need to verify your identity and may deny or limit requests where legally permitted, including when records must be retained. Authorized agents may submit requests where applicable law allows. We will respond within applicable statutory timeframes and explain any available appeal process.
 
 Medical-record access or amendment requests relating to a particular healthcare provider or pharmacy may need to be directed to that organization under its Notice of Privacy Practices.
 
-## 12. State Consumer Health Data Privacy
+## 11. State Consumer Health Data Privacy
 Certain state laws, including laws addressing consumer health data, may provide additional rights and require specific disclosures about health-related information collected outside HIPAA. Where those laws apply, we will process consumer health data only for permitted purposes, with consent or authorization when required, and provide any required separate Consumer Health Data Privacy Policy or supplemental notice. [LEGAL REVIEW REQUIRED: DETERMINE WHETHER A SEPARATE WASHINGTON/NEVADA CONSUMER HEALTH DATA NOTICE, CONSENT FLOW, AND GEOPHYSICAL-LOCATION RESTRICTIONS ARE REQUIRED.]
 
-## 13. Third-Party Websites and Services
+## 12. Third-Party Websites and Services
 Our Services may link to third-party websites or integrate independent providers' portals and pharmacy services. Their privacy practices may differ from ours. Review their privacy notices before providing information directly to them. We are not responsible for the privacy practices of websites or services we do not control.
 
-## 14. Changes to This Policy
+## 13. Changes to This Policy
 We may revise this Privacy Policy to reflect changes in our practices, Services, or legal requirements. We will post the revised version with an updated date and provide additional notice or request consent when required by law.
 
-## 15. Contact Us
+## 14. Contact Us
 @@ TAM Longevity LLC | Attn: Privacy Inquiries | 525 Metroplex Dr | Nashville, TN 37211 | Phone: 888-423-5988 | Email: info@tamlongevity.com
 
 For medical emergencies, call 911 or seek emergency medical attention. Do not use this privacy contact channel for urgent medical needs.
