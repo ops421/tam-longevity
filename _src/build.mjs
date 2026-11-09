@@ -524,7 +524,7 @@ function legalHtml(md) {
     else if (line.startsWith('!! ')) { if (site.draft) out.push(`<div class="draft-banner"><strong>Draft</strong><p>${esc(line.slice(3))}</p></div>`); }
     else if (line.startsWith('@@ ')) out.push(`<p class="address">${line.slice(3).split(' | ').map(esc).join('<br>')}</p>`);
     else if (line.startsWith('Last Updated')) out.push(`<p class="updated">${esc(line)}</p>`);
-    else out.push(`<p>${inline(line)}</p>`);
+    else { const html = inline(line).trim(); if (html) out.push(`<p>${html}</p>`); }
   }
   flush();
   return out.join('\n    ');
