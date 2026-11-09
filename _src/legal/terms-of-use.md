@@ -70,7 +70,7 @@ The Platform's design, text, graphics, trademarks, and other content are owned b
 Individual experiences and clinical outcomes vary. We do not guarantee that a treatment will be prescribed, available, effective, or suitable for any particular person. To the extent permitted by law, the nonclinical Platform is provided on an "as available" basis, without warranties regarding uninterrupted access or freedom from technical errors. This section does not disclaim professional obligations of treating clinicians or any warranties or consumer rights that cannot lawfully be excluded.
 
 ## 18. Limitation of Liability
-To the maximum extent permitted by applicable law, TAM Longevity will not be liable for indirect, incidental, special, consequential, or punitive damages arising solely from use of the nonclinical Platform. Any further limitation of liability, monetary cap, allocation of liability among TAM Longevity and independent providers or pharmacies, or exclusions relating to personal injury or healthcare services must be drafted and approved by counsel. Nothing in these Terms limits liability or rights that cannot legally be limited.
+To the maximum extent permitted by applicable law, TAM Longevity will not be liable for indirect, incidental, special, consequential, or punitive damages arising solely from use of the nonclinical Platform. Nothing in these Terms limits liability or rights that cannot legally be limited.
 
 [COUNSEL TO DETERMINE whether a liability cap is appropriate and lawful; none has been inserted.]
 
