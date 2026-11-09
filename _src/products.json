@@ -4,18 +4,31 @@
     "name": "Semaglutide",
     "fullName": "Compounded Semaglutide",
     "category": "Personalized Medical Weight Management",
-    "heroIntro": "Explore treatment options with licensed healthcare providers.",
+    "heroIntro": "Explore compounded semaglutide as a potential treatment option through an online evaluation with a licensed healthcare provider.",
     "cardBlurb": "A GLP-1 option that may support weight management when prescribed by a licensed provider.",
-    "vialLabel": ["Semaglutide", "Injection"],
+    "vialLabel": [
+      "Semaglutide",
+      "Injection"
+    ],
     "pricing": [
-      { "months": 1, "perMonth": 179 },
-      { "months": 3, "perMonth": 160 },
-      { "months": 6, "perMonth": 135 }
+      {
+        "months": 1,
+        "perMonth": 179
+      },
+      {
+        "months": 3,
+        "perMonth": 160
+      },
+      {
+        "months": 6,
+        "perMonth": 135
+      }
     ],
     "what": [
       "Semaglutide is a glucagon-like peptide-1 (GLP-1) receptor agonist that acts on receptors involved in appetite regulation and blood glucose control.",
       "Compounded semaglutide is a prescription medication prepared by a licensed compounding pharmacy for an individual patient when prescribed by a healthcare provider.",
-      "Compounded semaglutide is not FDA-approved and is not an FDA-approved generic equivalent of any brand-name medication."
+      "Compounded semaglutide is not FDA-approved and is not an FDA-approved generic equivalent of any brand-name medication.",
+      "Your provider will determine whether this treatment is medically appropriate for you."
     ],
     "photo": "couple-sema",
     "photoAlt": "Smiling middle-aged couple outdoors in warm sunlight",
@@ -39,48 +52,113 @@
         "Food or liquid getting into the lungs during surgery or procedures that use anesthesia or deep sedation. Tell all of your providers that you use semaglutide before any procedure."
       ],
       "common": "nausea, vomiting, diarrhea, constipation, abdominal pain, headache, fatigue, upset stomach, dizziness, bloating, belching, gas, and heartburn.",
-      "pregnancy": "Tell your provider if you are pregnant, plan to become pregnant, or are breastfeeding. Semaglutide may harm an unborn baby."
+      "pregnancy": "Tell your provider if you are pregnant, plan to become pregnant, or are breastfeeding. Semaglutide may harm an unborn baby.",
+      "tellProvider": "Tell your provider about all medical conditions and medications, including any history of diabetic retinopathy, planned procedures requiring anesthesia or deep sedation, pregnancy, or breastfeeding."
     },
     "faqs": [
       {
         "q": "Is compounded semaglutide FDA-approved?",
-        "a": "No. Compounded semaglutide is not FDA-approved. The FDA does not review compounded medications for safety, effectiveness, or quality before they are marketed. It is prepared by a licensed compounding pharmacy for an individual patient based on a valid prescription."
+        "a": "No. Compounded semaglutide is not FDA-approved and has not undergone FDA premarket review for safety, effectiveness, or quality."
       },
       {
         "q": "Do I need a prescription?",
-        "a": "Yes. Compounded semaglutide is available only with a prescription from a licensed healthcare provider, and only when the provider determines that treatment is medically appropriate for you."
+        "a": "Yes. A licensed healthcare provider must determine whether treatment is medically appropriate."
       },
       {
-        "q": "How long does it take to receive my medication?",
-        "a": "Timing depends on your provider review and pharmacy processing. If you are prescribed treatment, your care team will share an estimated delivery date once your prescription has been processed."
+        "q": "Can my dosage change?",
+        "a": "Your provider may adjust your dosage based on your medical circumstances and response to treatment. Never change your dose without provider instructions."
       },
       {
-        "q": "Can my dosage change during treatment?",
-        "a": "Yes. Your provider may adjust your dose over time based on how you respond and any side effects you experience. Do not change your dose without talking to your provider first."
+        "q": "How long does shipping take?",
+        "a": "Our typical pharmacy processing turnaround is 24 to 48 hours after prescription approval, subject to pharmacy operations and medication availability. Carrier delivery times may vary."
       },
       {
-        "q": "What if I experience side effects?",
-        "a": "Contact your care team about any side effects. If you have severe stomach pain that will not go away, signs of a serious allergic reaction, or any other severe symptoms, call 911 or seek emergency care right away. See the Important Safety Information on this page for more details."
+        "q": "Do I need insurance?",
+        "a": "Insurance is not required to begin the TAM Longevity evaluation process."
+      },
+      {
+        "q": "Who dispenses my medication?",
+        "a": "Prescriptions are filled by appropriately licensed U.S. pharmacies. The dispensing pharmacy may vary by state and medication availability."
       }
-    ]
+    ],
+    "eligibilityNote": "Prescription required. Treatment eligibility is determined by a licensed healthcare provider.",
+    "included": [
+      [
+        "stethoscope",
+        "Licensed Healthcare Providers",
+        "Your medical history and treatment eligibility are reviewed by a licensed healthcare professional."
+      ],
+      [
+        "clipboardList",
+        "Personalized Treatment Planning",
+        "Treatment decisions and any prescribed dosage are based on your individual medical needs."
+      ],
+      [
+        "users",
+        "Ongoing Support",
+        "Access your care team for treatment-related questions and follow-up care."
+      ],
+      [
+        "package",
+        "Pharmacy Fulfillment",
+        "If prescribed, medication is dispensed by a licensed U.S. pharmacy and shipped where legally permitted."
+      ]
+    ],
+    "steps": [
+      [
+        "Complete Your Health Assessment",
+        "Answer questions about your health history, medications, and weight management goals."
+      ],
+      [
+        "Connect With a Licensed Provider",
+        "A healthcare provider reviews your information and determines whether treatment is appropriate."
+      ],
+      [
+        "Receive Your Treatment Plan",
+        "Your provider discusses your treatment options, potential risks, and any recommended follow-up care."
+      ],
+      [
+        "Receive Your Medication",
+        "If prescribed, medication is dispensed by a licensed pharmacy and shipped to your address where permitted."
+      ]
+    ],
+    "administration": [
+      "Compounded semaglutide injection may be prescribed for subcutaneous administration, generally once weekly.",
+      "Your provider and dispensing pharmacy will supply instructions specific to your prescription, including dose, concentration, injection technique, and schedule.",
+      "Compounded products may have different concentrations. Always follow the exact instructions on your prescription label. Do not substitute syringe units for milligrams without confirming the conversion with your pharmacist."
+    ],
+    "ctaSub": "Complete your online medical assessment to explore your treatment options with a licensed healthcare provider."
   },
   {
     "slug": "tirzepatide",
     "name": "Tirzepatide",
     "fullName": "Compounded Tirzepatide",
-    "category": "Personalized Medical Weight Management",
-    "heroIntro": "Explore compounded tirzepatide as a potential treatment option through a licensed healthcare provider.",
+    "category": "Individualized Weight Management Care",
+    "heroIntro": "Explore compounded tirzepatide as a potential treatment option with licensed healthcare providers through TAM Longevity.",
     "cardBlurb": "A dual-acting treatment option that may support weight management when prescribed by a licensed provider.",
-    "vialLabel": ["Tirzepatide", "Injection"],
+    "vialLabel": [
+      "Tirzepatide",
+      "Injection"
+    ],
     "pricing": [
-      { "months": 1, "perMonth": 179 },
-      { "months": 3, "perMonth": 160 },
-      { "months": 6, "perMonth": 135 }
+      {
+        "months": 1,
+        "perMonth": 179
+      },
+      {
+        "months": 3,
+        "perMonth": 160
+      },
+      {
+        "months": 6,
+        "perMonth": 135
+      }
     ],
     "what": [
-      "Tirzepatide is a prescription medication that acts on two hormone receptor pathways (GIP and GLP-1) involved in appetite regulation and metabolic health.",
-      "Compounded tirzepatide is prepared by a licensed compounding pharmacy for an individual patient when prescribed by a healthcare provider.",
-      "Compounded tirzepatide is not FDA-approved and is not an FDA-approved generic equivalent of any brand-name medication."
+      "Tirzepatide acts on two hormone receptor pathways involved in metabolic regulation: glucose-dependent insulinotropic polypeptide (GIP) and glucagon-like peptide-1 (GLP-1).",
+      "Compounded tirzepatide is a prescription medication prepared by a licensed compounding pharmacy for an individual patient when prescribed by a healthcare provider.",
+      "Compounded tirzepatide is not FDA-approved and is not an FDA-approved generic equivalent of a brand-name medication.",
+      "Your provider will evaluate whether treatment is appropriate based on your medical history and individual needs."
     ],
     "photo": "couple-tirz",
     "photoAlt": "Smiling middle-aged couple standing together outdoors",
@@ -102,29 +180,81 @@
         "Food or liquid getting into the lungs during surgery or procedures that use anesthesia or deep sedation. Tell all of your providers that you use tirzepatide before any procedure."
       ],
       "common": "nausea, diarrhea, vomiting, constipation, abdominal discomfort, indigestion, injection-site reactions, fatigue, allergic reactions, belching, hair loss, and heartburn.",
-      "pregnancy": "Tell your provider if you are pregnant, plan to become pregnant, or are breastfeeding. Tirzepatide may harm an unborn baby. Birth control pills taken by mouth may not work as well while using tirzepatide; your provider may recommend a non-oral method for 4 weeks after you start and for 4 weeks after each dose increase."
+      "pregnancy": "Tell your provider if you are pregnant, plan to become pregnant, or are breastfeeding. Tirzepatide may harm an unborn baby. Birth control pills taken by mouth may not work as well while using tirzepatide; your provider may recommend a non-oral method for 4 weeks after you start and for 4 weeks after each dose increase.",
+      "tellProvider": "Tell your provider if you are pregnant, planning pregnancy, breastfeeding, have a history of significant gastrointestinal disease, or have a planned procedure involving anesthesia or deep sedation. Tirzepatide can affect absorption of oral medications."
     },
     "faqs": [
       {
         "q": "Is compounded tirzepatide FDA-approved?",
-        "a": "No. Compounded tirzepatide is not FDA-approved. The FDA does not review compounded medications for safety, effectiveness, or quality before they are marketed. It is prepared by a licensed compounding pharmacy for an individual patient based on a valid prescription."
+        "a": "No. Compounded tirzepatide is not FDA-approved and has not undergone FDA premarket review for safety, effectiveness, or quality."
       },
       {
         "q": "Do I need a prescription?",
-        "a": "Yes. Compounded tirzepatide is available only with a prescription from a licensed healthcare provider, and only when the provider determines that treatment is medically appropriate for you."
+        "a": "Yes. A licensed healthcare provider must evaluate your medical information and determine whether treatment is appropriate."
       },
       {
-        "q": "How long does it take to receive my medication?",
-        "a": "Timing depends on your provider review and pharmacy processing. If you are prescribed treatment, your care team will share an estimated delivery date once your prescription has been processed."
+        "q": "How often is it administered?",
+        "a": "Tirzepatide injection is generally administered once weekly, according to your provider's instructions."
       },
       {
-        "q": "Can my dosage change during treatment?",
-        "a": "Yes. Your provider may adjust your dose over time based on how you respond and any side effects you experience. Do not change your dose without talking to your provider first."
+        "q": "Can my dose be adjusted?",
+        "a": "Your provider may adjust your dose based on your individual medical needs and response to treatment."
       },
       {
-        "q": "What if I experience side effects?",
-        "a": "Contact your care team about any side effects. If you have severe stomach pain that will not go away, signs of a serious allergic reaction, or any other severe symptoms, call 911 or seek emergency care right away. See the Important Safety Information on this page for more details."
+        "q": "How long does shipping take?",
+        "a": "Our typical pharmacy processing turnaround is 24 to 48 hours after prescription approval, subject to pharmacy operations and medication availability. Carrier delivery times may vary."
+      },
+      {
+        "q": "Who dispenses my medication?",
+        "a": "Prescriptions are dispensed by licensed U.S. pharmacies. The dispensing pharmacy may vary based on your state and medication availability."
       }
-    ]
+    ],
+    "eligibilityNote": "Prescription required. Treatment is available only when medically appropriate and legally permitted.",
+    "included": [
+      [
+        "stethoscope",
+        "Licensed Healthcare Providers",
+        "Your health information is evaluated by a licensed medical professional."
+      ],
+      [
+        "clipboardList",
+        "Individualized Treatment Plans",
+        "Treatment recommendations are based on your medical history, clinical needs, and provider assessment."
+      ],
+      [
+        "users",
+        "Ongoing Provider Support",
+        "Contact your care team for treatment-related questions and follow-up care."
+      ],
+      [
+        "package",
+        "Licensed Pharmacy Fulfillment",
+        "If prescribed, medication is dispensed and shipped by a licensed U.S. pharmacy where legally permitted."
+      ]
+    ],
+    "steps": [
+      [
+        "Complete Your Health Assessment",
+        "Provide information about your medical history, current medications, and treatment goals."
+      ],
+      [
+        "Connect With a Provider",
+        "A licensed healthcare provider reviews your information and determines whether treatment may be appropriate."
+      ],
+      [
+        "Receive Your Treatment Plan",
+        "Your provider discusses available options, potential risks, dosage instructions, and follow-up care."
+      ],
+      [
+        "Receive Your Medication",
+        "If prescribed, medication is dispensed by a licensed pharmacy and shipped to your address where permitted."
+      ]
+    ],
+    "administration": [
+      "Compounded tirzepatide injection may be prescribed for subcutaneous administration, generally once weekly.",
+      "Your provider and dispensing pharmacy will provide instructions specific to your prescription.",
+      "Because compounded products may differ in concentration, carefully verify the prescribed dose and injection volume before administration. Contact your pharmacist if you have questions about syringe markings or dosage instructions."
+    ],
+    "ctaSub": "Complete your online medical assessment to explore treatment options with a licensed healthcare provider."
   }
 ]

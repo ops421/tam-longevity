@@ -12,6 +12,7 @@ const SRC = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(SRC, '..');
 const site = JSON.parse(fs.readFileSync(path.join(SRC, 'site.json'), 'utf8'));
 const products = JSON.parse(fs.readFileSync(path.join(SRC, 'products.json'), 'utf8'));
+const faqData = JSON.parse(fs.readFileSync(path.join(SRC, 'faq.json'), 'utf8'));
 const YEAR = new Date().getFullYear();
 
 // ---------- icons (Lucide, MIT) ----------
@@ -119,13 +120,14 @@ function waves() {
 </svg>`;
 }
 
-function ctaBand(r, title, sub, label) {
+function ctaBand(r, title, sub, label, fine = '') {
   return `<section class="cta-band">
   ${waves()}
   <div class="wrap cta-inner reveal">
     <h2>${title}</h2>
     <p>${sub}</p>
     ${cta(r, label)}
+    ${fine ? `<p class="cta-fine">${fine}</p>` : ''}
   </div>
 </section>`;
 }
@@ -149,7 +151,7 @@ function footer(r) {
     </div>
     <div>
       <h3>Company</h3>
-      <ul><li><a href="${r}about/">About</a></li><li><a href="${r}resources/">Resources</a></li><li><a href="${r}${site.assessmentUrl}">Get Started</a></li></ul>
+      <ul><li><a href="${r}about/">About</a></li><li><a href="${r}faq/">FAQ</a></li><li><a href="${r}resources/">Resources</a></li><li><a href="${r}${site.assessmentUrl}">Get Started</a></li></ul>
     </div>
     <div>
       <h3>Legal</h3>
@@ -157,8 +159,8 @@ function footer(r) {
     </div>
   </div>
   <div class="wrap footer-legal">
-    <p>Compounded medications are not FDA-approved. The FDA does not review compounded medications for safety, effectiveness, or quality before they are marketed. A prescription is required, and treatment is available only when a licensed healthcare provider determines it is medically appropriate. If prescribed, medication is dispensed by TAM Pharmacy or a licensed partner pharmacy and shipped where permitted by law. This website does not provide medical advice. In an emergency, call 911.</p>
-    <p>&copy; ${YEAR} ${site.siteName}. All rights reserved.</p>
+    <p>${site.legalName} is not the prescribing clinician or dispensing pharmacy. Independent licensed healthcare providers make all medical decisions, and licensed pharmacies dispense prescriptions in accordance with applicable law. Compounded medications are not FDA-approved; the FDA does not review compounded medications for safety, effectiveness, or quality before marketing. A prescription is required, and treatment is available only when medically appropriate. This website does not provide medical advice. In an emergency, call 911.</p>
+    <p>&copy; ${YEAR} ${site.legalName}. All rights reserved.</p>
   </div>
 </footer>`;
 }
@@ -187,13 +189,9 @@ function vial(p, sizes = '(max-width: 760px) 60vw, 360px') {
 </figure>`;
 }
 
-function howItWorks(step2, step4, eyebrow = '') {
-  const steps = [
-    ['laptop', 'Complete Your Health Assessment', 'Answer questions about your medical history, current medications, and health goals.'],
-    ['provider', step2[0], step2[1]],
-    ['clipboardCheck', 'Receive Your Personalized Plan', 'Your provider discusses treatment options, dosage, potential risks, and recommended follow-up care.'],
-    ['truck', 'Receive Your Medication', step4]
-  ];
+function howItWorks(stepCopy, eyebrow = '') {
+  const icons = ['laptop', 'provider', 'clipboardCheck', 'truck'];
+  const steps = stepCopy.map(([h, t], i) => [icons[i], h, t]);
   return `<section class="section how" id="how-it-works">
   <div class="wrap">
     <div class="section-head reveal">
@@ -241,6 +239,8 @@ function isiBody(p) {
       <p>Common side effects may include ${i.common}</p>
       <h3>Pregnancy and breastfeeding</h3>
       <p>${i.pregnancy}</p>
+      ${i.tellProvider ? `<p>${i.tellProvider}</p>` : ''}
+      <p>This is a summary, not a complete list of risks. Your prescribing provider and dispensing pharmacist should review the full safety information relevant to your treatment.</p>
       <p class="isi-report">Tell your provider about all medicines you take, including insulin or sulfonylureas. You are encouraged to report negative side effects of prescription drugs to the FDA. Visit <a href="https://www.fda.gov/medwatch" rel="noopener">www.fda.gov/medwatch</a> or call 1-800-FDA-1088.</p>`;
 }
 
@@ -256,12 +256,7 @@ function productPage(p) {
         </li>`
     )
     .join('\n        ');
-  const included = [
-    ['stethoscope', 'Licensed Provider Review', 'Your medical history and treatment eligibility are reviewed by a licensed healthcare provider.'],
-    ['clipboardList', 'Individualized Care', 'A personalized treatment plan based on your health history and goals.'],
-    ['users', 'Ongoing Support', 'Access to your care team for treatment-related questions and follow-up care.'],
-    ['package', 'Licensed Pharmacy Delivery', 'If prescribed, your medication is dispensed by a licensed U.S. pharmacy and shipped to your address.']
-  ];
+  const included = p.included;
   const body = `
 <section class="product-hero">
   <div class="wrap hero-grid">
@@ -275,6 +270,7 @@ function productPage(p) {
         ${priceCells}
       </ul>
       <div class="hero-cta">${cta('../')}<p class="price-note">${site.pricingNote}</p></div>
+      <p class="elig-note">${p.eligibilityNote}</p>
     </div>
   </div>
   <div class="wrap">
@@ -299,7 +295,14 @@ function productPage(p) {
   </div>
 </section>
 
-${howItWorks(['Provider Review', 'A licensed healthcare provider reviews your information and determines whether treatment is appropriate.'], 'If prescribed, your medication is dispensed by a licensed pharmacy and shipped to you where permitted by law.')}
+${howItWorks(p.steps)}
+
+<section class="section admin">
+  <div class="wrap what-grid reveal">
+    <h2>How Is ${p.fullName} Administered?</h2>
+    <div class="what-copy">${p.administration.map((t) => `<p>${t}</p>`).join('')}</div>
+  </div>
+</section>
 
 <section class="section why">
   <div class="wrap">
@@ -340,7 +343,7 @@ ${howItWorks(['Provider Review', 'A licensed healthcare provider reviews your in
   </div>
 </section>
 
-${ctaBand('../', 'Your Care Starts Here.', 'Complete a medical assessment today to explore treatment options with a licensed healthcare provider.', site.assessmentLabel)}
+${ctaBand('../', 'Your Care Starts Here.', p.ctaSub, site.assessmentLabel, 'Prescription eligibility and medication availability are subject to medical evaluation and applicable law.')}
 `;
   const tray = `<aside class="isi-tray" id="isi-tray" aria-label="Important Safety Information summary">
   <button class="isi-tray-toggle" aria-expanded="false" aria-controls="isi-tray-body"><span><strong>Important Safety Information</strong><em>${p.fullName} is not FDA-approved. Boxed warning: risk of thyroid C-cell tumors.</em></span>${icon('chevron')}</button>
@@ -385,7 +388,7 @@ function homePage() {
     { q: `Are ${nameList} FDA-approved?`, a: `Certain brand-name medications that contain ${nameList} are FDA-approved for specific uses. Compounded ${nameList} are not FDA-approved, and the FDA does not review compounded medications for safety, effectiveness, or quality before they are marketed. Compounded medications are prepared by a licensed pharmacy for an individual patient based on a valid prescription.` },
     { q: `Who can take ${compNames.join(' or ')}?`, a: 'Only a licensed healthcare provider can determine whether treatment is appropriate for you, after reviewing your medical history, current medications, and health goals. These medications are not right for everyone, including people with a personal or family history of medullary thyroid carcinoma (MTC) or Multiple Endocrine Neoplasia syndrome type 2 (MEN 2).' },
     { q: 'How is the medication prescribed?', a: 'You complete a secure online health assessment. A licensed healthcare provider reviews your information and, if treatment is appropriate, issues a prescription written for you.' },
-    { q: 'Where is my medication shipped from?', a: 'If prescribed, your medication is dispensed by TAM Pharmacy, a licensed U.S. pharmacy, or by a licensed partner pharmacy in states TAM Pharmacy does not yet serve. It is shipped to your address where permitted by law.' },
+    { q: 'Where is my medication shipped from?', a: 'If prescribed, your medication is dispensed by a licensed U.S. pharmacy partner, including TAM Pharmacy and Epiq Scripts, and shipped to your address where permitted by law. Typical pharmacy processing is 24 to 48 hours after prescription approval; carrier delivery times vary.' },
     { q: 'How much does it cost?', a: `Illustrative pricing is ${priceSentence}. Final pricing is confirmed with you before you are charged. No insurance is required.` },
     { q: 'What kind of support will I receive during treatment?', a: 'Your care team is available for treatment-related questions and follow-up care throughout your program, and your provider can adjust your plan as needed.' }
   ];
@@ -404,7 +407,12 @@ function homePage() {
   </div>
 </section>
 
-${howItWorks(['Connect With a Provider', 'A licensed healthcare provider reviews your information and determines whether treatment is appropriate.'], 'If prescribed, your medication is dispensed by an appropriately licensed pharmacy and delivered where permitted by law.', 'How It Works')}
+${howItWorks([
+  ['Complete Your Health Assessment', 'Provide information about your medical history, current medications, and health concerns.'],
+  ['Connect With a Provider', 'A licensed healthcare provider reviews your information and determines whether treatment is appropriate.'],
+  ['Receive Your Treatment Plan', 'Your provider discusses available options, potential risks, and recommended follow-up care.'],
+  ['Receive Your Medication', 'If prescribed, medication is dispensed by a licensed pharmacy and shipped where permitted by law.']
+], 'How It Works')}
 
 <section class="section why hub-why">
   <div class="wrap">
@@ -435,6 +443,7 @@ ${howItWorks(['Connect With a Provider', 'A licensed healthcare provider reviews
         <p>Get answers to common questions about our treatments, process, and care.</p>
       </div>
       ${faqList(faqs)}
+      <p class="faq-more"><a href="faq/">See all frequently asked questions${icon('arrow')}</a></p>
     </div>
   </div>
 </section>
@@ -481,11 +490,57 @@ simplePage('get-started', 'Online Assessment', 'Get Started',
     <p>When it opens, you will answer questions about your medical history, current medications, and health goals. A licensed healthcare provider will review your information and determine whether treatment is appropriate.</p>
     <div class="chooser">${products.map((p) => `<a class="chooser-item" href="../${p.slug}/"><span>${p.fullName}</span>${icon('arrow')}</a>`).join('')}</div>`,
   'Start your TAM Longevity online health assessment.');
-simplePage('about', 'About TAM Longevity', 'About', soon('Content for this page is being prepared and will be posted here soon.'), 'About TAM Longevity.');
+simplePage('about', 'About TAM Longevity', 'About',
+  `<p class="lead">TAM Longevity is an online healthcare platform that connects patients with licensed medical providers for personalized medical evaluations, treatment options, and ongoing care.</p>
+    <p>When medically appropriate, prescription medications may be dispensed and shipped directly to patients by licensed U.S. pharmacies.</p>
+    <h2>Our Network</h2>
+    <ul class="about-list">
+      <li><strong>Provider network.</strong> TAM Longevity works with <a href="https://locumtele.org/" rel="noopener" target="_blank">LocumTele</a>, a healthcare provider network that connects patients with licensed medical professionals for telehealth evaluations and treatment planning. Prescribing decisions are made independently by licensed healthcare providers based on each patient's medical needs.</li>
+      <li><strong>Pharmacy partners.</strong> Prescriptions are fulfilled by licensed U.S. pharmacy partners, including TAM Pharmacy and <a href="https://epiqscripts.com/" rel="noopener" target="_blank">Epiq Scripts</a>. The dispensing pharmacy may vary based on your location, medication availability, and applicable state requirements.</li>
+      <li><strong>Where we serve.</strong> TAM Longevity serves patients in all 50 U.S. states through its network of licensed healthcare providers and pharmacy partners. Specific treatments and medications may not be available in every state.</li>
+    </ul>
+    <h2>Contact</h2>
+    <p>${site.legalName}<br>${site.contact.address}<br><a href="tel:${site.contact.phone.replace(/[^0-9]/g, '')}">${site.contact.phone}</a></p>`,
+  'About TAM Longevity: online medical evaluations with licensed providers and licensed U.S. pharmacy partners.');
 simplePage('resources', 'Resources', 'Resources', soon('Patient resources and guides are being prepared and will be posted here soon.'), 'Patient resources from TAM Longevity.');
-site.legal.forEach((l) =>
-  simplePage(l.slug, l.label, 'Legal', soon(`Our ${l.label} is being finalized and will be posted here before launch.`), `TAM Longevity ${l.label}.`)
-);
+// Legal pages from _src/legal/<slug>.md
+//   "## " heading, "- " bullet, "!! " draft banner, "@@ a | b" address block,
+//   [BRACKETED NOTES] shown as highlighted draft notes while site.draft is true, removed otherwise.
+const esc = (t) => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+function inline(t) {
+  t = esc(t);
+  return t.replace(/\s*\[([^\]]+)\]/g, (_, n) => (site.draft ? ` <mark class="draft-note">Draft note: ${n}</mark>` : ''));
+}
+function legalHtml(md) {
+  const out = [];
+  let list = null;
+  const flush = () => { if (list) { out.push(`<ul>${list.join('')}</ul>`); list = null; } };
+  for (const raw of md.split('\n')) {
+    const line = raw.trim();
+    if (!line) { flush(); continue; }
+    if (line.startsWith('- ')) { (list ||= []).push(`<li>${inline(line.slice(2))}</li>`); continue; }
+    flush();
+    if (line.startsWith('## ')) out.push(`<h2>${esc(line.slice(3))}</h2>`);
+    else if (line.startsWith('!! ')) { if (site.draft) out.push(`<div class="draft-banner"><strong>Draft</strong><p>${esc(line.slice(3))}</p></div>`); }
+    else if (line.startsWith('@@ ')) out.push(`<p class="address">${line.slice(3).split(' | ').map(esc).join('<br>')}</p>`);
+    else if (line.startsWith('Last Updated')) out.push(`<p class="updated">${esc(line)}</p>`);
+    else out.push(`<p>${inline(line)}</p>`);
+  }
+  flush();
+  return out.join('\n    ');
+}
+site.legal.forEach((l) => {
+  const md = fs.readFileSync(path.join(SRC, 'legal', `${l.slug}.md`), 'utf8');
+  simplePage(l.slug, l.label, 'Legal', `<div class="legal">${legalHtml(md)}</div>`, `${site.legalName} ${l.label}.`);
+});
+
+// Full FAQ page from _src/faq.json
+simplePage('faq', 'Frequently Asked Questions', 'FAQ',
+  `<p class="lead">Find answers to common questions about TAM Longevity, our medical services, prescriptions, shipping, and patient support.</p>
+    <nav class="faq-jump" aria-label="FAQ topics">${faqData.map((c, i) => `<a href="#topic-${i + 1}">${c.title}</a>`).join('')}</nav>
+    ${faqData.map((c, i) => `<section class="faq-topic" id="topic-${i + 1}"><h2>${c.title}</h2>
+    <div class="faq-list">${c.items.map((f) => `<details class="faq"><summary>${f.q}${icon('chevron')}</summary><div class="faq-a">${f.a.map((x) => (x.startsWith('<ol') ? x : `<p>${x}</p>`)).join('').replaceAll('{r}', '../')}</div></details>`).join('')}</div></section>`).join('\n    ')}`,
+  'Answers to common questions about TAM Longevity, prescriptions, shipping, billing, and our provider and pharmacy network.');
 
 // 404 uses absolute paths because it can be served from any depth.
 write('404.html', page({
@@ -497,7 +552,7 @@ write('404.html', page({
 }));
 
 // sitemap
-const urls = ['', ...products.map((p) => p.slug + '/'), 'get-started/', 'about/', 'resources/', ...site.legal.map((l) => l.slug + '/')];
+const urls = ['', ...products.map((p) => p.slug + '/'), 'get-started/', 'about/', 'resources/', 'faq/', ...site.legal.map((l) => l.slug + '/')];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url><loc>${site.baseUrl}/${u}</loc></url>`).join('\n')}

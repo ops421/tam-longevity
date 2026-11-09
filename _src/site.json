@@ -2,29 +2,46 @@
   "siteName": "TAM Longevity",
   "baseUrl": "https://tamlongevity.com",
   "noindex": true,
-
   "assessmentUrl": "get-started/",
   "assessmentLabel": "Start Online Assessment",
-
   "pricingNote": "Illustrative pricing • subject to confirmation",
-
   "contact": {
     "email": "",
-    "phone": "",
-    "address": ""
+    "phone": "888-423-5988",
+    "address": "525 Metroplex Dr, Nashville, TN 37211"
   },
-
   "nav": [
-    { "label": "How It Works", "href": "#how-it-works" },
-    { "label": "About", "href": "about/" },
-    { "label": "Resources", "href": "resources/" },
-    { "label": "FAQ", "href": "#faq" }
+    {
+      "label": "How It Works",
+      "href": "#how-it-works"
+    },
+    {
+      "label": "About",
+      "href": "about/"
+    },
+    {
+      "label": "Resources",
+      "href": "resources/"
+    },
+    {
+      "label": "FAQ",
+      "href": "faq/"
+    }
   ],
-
   "legal": [
-    { "label": "Privacy Policy", "slug": "privacy-policy" },
-    { "label": "Terms of Use", "slug": "terms-of-use" },
-    { "label": "Telehealth Consent", "slug": "telehealth-consent" },
-    { "label": "Shipping and Refunds", "slug": "shipping-and-refunds" }
-  ]
+    {
+      "label": "Privacy Policy",
+      "slug": "privacy-policy"
+    },
+    {
+      "label": "Terms of Use",
+      "slug": "terms-of-use"
+    },
+    {
+      "label": "Return, Refund and Subscription Policy",
+      "slug": "return-refund-subscription-policy"
+    }
+  ],
+  "draft": true,
+  "legalName": "TAM Longevity LLC"
 }
