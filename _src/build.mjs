@@ -229,7 +229,7 @@ function faqList(items) {
 
 function isiBody(p) {
   const i = p.isi;
-  return `<p class="isi-lede"><strong>${p.fullName} is not FDA-approved.</strong> The information below is based on the prescribing information for FDA-approved medications that contain the same active ingredient. It does not include all possible risks. Discuss your full medical history and all medications with your healthcare provider.</p>
+  return `<p class="isi-lede"><strong>${p.fullName} is not FDA-approved.</strong> The information below summarizes important risks associated with ${p.name.toLowerCase()}. It does not include all possible risks. Discuss your full medical history and all medications with your healthcare provider.</p>
       <div class="boxed"><h3>Warning: Risk of Thyroid C-Cell Tumors</h3><p>${i.boxed}</p></div>
       <h3>Do not use ${p.name.toLowerCase()} if:</h3>
       <ul>${i.doNotUse.map((x) => `<li>${x}</li>`).join('')}</ul>
@@ -315,7 +315,7 @@ ${howItWorks(p.steps)}
         <ul class="checks">
           <li>${icon('check')}Care from licensed U.S. healthcare providers</li>
           <li>${icon('check')}Personalized treatment plans and dosing</li>
-          <li>${icon('check')}Convenient online care, with pharmacy delivery through TAM Pharmacy and licensed partners</li>
+          <li>${icon('check')}Convenient online care, with delivery from licensed U.S. pharmacy partners</li>
           <li>${icon('check')}Clear pricing and ongoing support</li>
         </ul>
       </div>
@@ -386,10 +386,10 @@ function homePage() {
     .map((x) => `${money(x.perMonth)} per month with a ${x.months}-month plan`)
     .join(', ');
   const faqs = [
-    { q: `Are ${nameList} FDA-approved?`, a: `Certain brand-name medications that contain ${nameList} are FDA-approved for specific uses. Compounded ${nameList} are not FDA-approved, and the FDA does not review compounded medications for safety, effectiveness, or quality before they are marketed. Compounded medications are prepared by a licensed pharmacy for an individual patient based on a valid prescription.` },
+    { q: `Are ${compList} FDA-approved?`, a: `No. ${compList.charAt(0).toUpperCase() + compList.slice(1)} are not FDA-approved, and the FDA does not review compounded medications for safety, effectiveness, or quality before they are marketed. Compounded medications are prepared by a licensed pharmacy for an individual patient based on a valid prescription.` },
     { q: `Who can take ${compNames.join(' or ')}?`, a: 'Only a licensed healthcare provider can determine whether treatment is appropriate for you, after reviewing your medical history, current medications, and health goals. These medications are not right for everyone, including people with a personal or family history of medullary thyroid carcinoma (MTC) or Multiple Endocrine Neoplasia syndrome type 2 (MEN 2).' },
     { q: 'How is the medication prescribed?', a: 'You complete a secure online health assessment. A licensed healthcare provider reviews your information and, if treatment is appropriate, issues a prescription written for you.' },
-    { q: 'Where is my medication shipped from?', a: 'If prescribed, your medication is dispensed by a licensed U.S. pharmacy partner, including TAM Pharmacy and Epiq Scripts, and shipped to your address where permitted by law. Typical pharmacy processing is 24 to 48 hours after prescription approval; carrier delivery times vary.' },
+    { q: 'Where is my medication shipped from?', a: 'If prescribed, your medication is dispensed by a licensed U.S. pharmacy partner, including Rush Pharmacy and Epiq Scripts, and shipped to your address where permitted by law. Typical pharmacy processing is 24 to 48 hours after prescription approval; carrier delivery times vary.' },
     { q: 'How much does it cost?', a: `Illustrative pricing is ${priceSentence}. Final pricing is confirmed with you before you are charged. No insurance is required.` },
     { q: 'What kind of support will I receive during treatment?', a: 'Your care team is available for treatment-related questions and follow-up care throughout your program, and your provider can adjust your plan as needed.' }
   ];
@@ -426,7 +426,7 @@ ${howItWorks([
       <ul class="checks checks-detail">
         <li>${icon('check')}<span><strong>Licensed U.S. Providers</strong>Care from experienced, licensed healthcare professionals.</span></li>
         <li>${icon('check')}<span><strong>Personalized Treatment</strong>Treatment plans based on your health history and goals.</span></li>
-        <li>${icon('check')}<span><strong>National Access</strong>Medication dispensed by TAM Pharmacy, or by a licensed partner pharmacy in states TAM Pharmacy does not yet serve.</span></li>
+        <li>${icon('check')}<span><strong>National Access</strong>Patients served in all 50 states through licensed U.S. pharmacy partners, including Rush Pharmacy and Epiq Scripts.</span></li>
         <li>${icon('check')}<span><strong>Transparent and Simple</strong>Clear pricing with no hidden fees. No insurance required.</span></li>
         <li>${icon('check')}<span><strong>Ongoing Support</strong>Guidance from your care team throughout your program.</span></li>
       </ul>
@@ -497,7 +497,7 @@ simplePage('about', 'About TAM Longevity', 'About',
     <h2>Our Network</h2>
     <ul class="about-list">
       <li><strong>Provider network.</strong> TAM Longevity works with <a href="https://locumtele.org/" rel="noopener" target="_blank">LocumTele</a>, a healthcare provider network that connects patients with licensed medical professionals for telehealth evaluations and treatment planning. Prescribing decisions are made independently by licensed healthcare providers based on each patient's medical needs.</li>
-      <li><strong>Pharmacy partners.</strong> Prescriptions are fulfilled by licensed U.S. pharmacy partners, including TAM Pharmacy and <a href="https://epiqscripts.com/" rel="noopener" target="_blank">Epiq Scripts</a>. The dispensing pharmacy may vary based on your location, medication availability, and applicable state requirements.</li>
+      <li><strong>Pharmacy partners.</strong> Prescriptions are fulfilled by licensed U.S. pharmacy partners, including <a href="https://rushpharmacy.com/" rel="noopener" target="_blank">Rush Pharmacy</a> and <a href="https://epiqscripts.com/" rel="noopener" target="_blank">Epiq Scripts</a>. The dispensing pharmacy may vary based on your location, medication availability, and applicable state requirements.</li>
       <li><strong>Where we serve.</strong> TAM Longevity serves patients in all 50 U.S. states through its network of licensed healthcare providers and pharmacy partners. Specific treatments and medications may not be available in every state.</li>
     </ul>
     <h2>Contact</h2>
