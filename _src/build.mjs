@@ -151,7 +151,7 @@ function footer(r) {
     </div>
     <div>
       <h3>Company</h3>
-      <ul><li><a href="${r}about/">About</a></li><li><a href="${r}faq/">FAQ</a></li><li><a href="${r}resources/">Resources</a></li><li><a href="${r}${site.assessmentUrl}">Get Started</a></li></ul>
+      <ul><li><a href="${r}about/">About</a></li><li><a href="${r}faq/">FAQ</a></li><li><a href="${r}${site.assessmentUrl}">Get Started</a></li></ul>
     </div>
     <div>
       <h3>Legal</h3>
@@ -241,7 +241,8 @@ function isiBody(p) {
       <p>${i.pregnancy}</p>
       ${i.tellProvider ? `<p>${i.tellProvider}</p>` : ''}
       <p>This is a summary, not a complete list of risks. Your prescribing provider and dispensing pharmacist should review the full safety information relevant to your treatment.</p>
-      <p class="isi-report">Tell your provider about all medicines you take, including insulin or sulfonylureas. You are encouraged to report negative side effects of prescription drugs to the FDA. Visit <a href="https://www.fda.gov/medwatch" rel="noopener">www.fda.gov/medwatch</a> or call 1-800-FDA-1088.</p>`;
+      <p class="isi-report"><strong>To report a side effect,</strong> contact your care team or call TAM Longevity at <a href="tel:${site.contact.phone.replace(/[^0-9]/g, '')}">${site.contact.phone}</a>. For a medical emergency, call 911.</p>
+      <p>Tell your provider about all medicines you take, including insulin or sulfonylureas. You are encouraged to report negative side effects of prescription drugs to the FDA. Visit <a href="https://www.fda.gov/medwatch" rel="noopener">www.fda.gov/medwatch</a> or call 1-800-FDA-1088.</p>`;
 }
 
 // ---------- product page ----------
@@ -502,7 +503,6 @@ simplePage('about', 'About TAM Longevity', 'About',
     <h2>Contact</h2>
     <p>${site.legalName}<br>${site.contact.address}<br><a href="tel:${site.contact.phone.replace(/[^0-9]/g, '')}">${site.contact.phone}</a></p>`,
   'About TAM Longevity: online medical evaluations with licensed providers and licensed U.S. pharmacy partners.');
-simplePage('resources', 'Resources', 'Resources', soon('Patient resources and guides are being prepared and will be posted here soon.'), 'Patient resources from TAM Longevity.');
 // Legal pages from _src/legal/<slug>.md
 //   "## " heading, "- " bullet, "!! " draft banner, "@@ a | b" address block,
 //   [BRACKETED NOTES] shown as highlighted draft notes while site.draft is true, removed otherwise.
@@ -552,7 +552,7 @@ write('404.html', page({
 }));
 
 // sitemap
-const urls = ['', ...products.map((p) => p.slug + '/'), 'get-started/', 'about/', 'resources/', 'faq/', ...site.legal.map((l) => l.slug + '/')];
+const urls = ['', ...products.map((p) => p.slug + '/'), 'get-started/', 'about/', 'faq/', ...site.legal.map((l) => l.slug + '/')];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url><loc>${site.baseUrl}/${u}</loc></url>`).join('\n')}
