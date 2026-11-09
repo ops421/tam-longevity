@@ -501,7 +501,7 @@ simplePage('about', 'About TAM Longevity', 'About',
       <li><strong>Where we serve.</strong> TAM Longevity serves patients in all 50 U.S. states through its network of licensed healthcare providers and pharmacy partners. Specific treatments and medications may not be available in every state.</li>
     </ul>
     <h2>Contact</h2>
-    <p>${site.legalName}<br>${site.contact.address}<br><a href="tel:${site.contact.phone.replace(/[^0-9]/g, '')}">${site.contact.phone}</a></p>`,
+    <p>${site.legalName}<br>${site.contact.address}<br><a href="tel:${site.contact.phone.replace(/[^0-9]/g, '')}">${site.contact.phone}</a><br><a href="mailto:${site.contact.email}">${site.contact.email}</a></p>`,
   'About TAM Longevity: online medical evaluations with licensed providers and licensed U.S. pharmacy partners.');
 // Legal pages from _src/legal/<slug>.md
 //   "## " heading, "- " bullet, "!! " draft banner, "@@ a | b" address block,

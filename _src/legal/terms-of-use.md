@@ -86,6 +86,6 @@ We may modify or discontinue Platform features or terminate access for legitimat
 If a provision is unenforceable, the remaining provisions continue to the extent permitted by law. These Terms, together with incorporated policies and any specific program agreements accepted by you, form the agreement governing the relevant Platform services. A failure to enforce a provision is not a waiver of the right to enforce it later.
 
 ## 22. Contact Information
-@@ TAM Longevity LLC | 525 Metroplex Dr | Nashville, TN 37211 | Phone: 888-423-5988
+@@ TAM Longevity LLC | 525 Metroplex Dr | Nashville, TN 37211 | Phone: 888-423-5988 | Email: info@tamlongevity.com
 
-A dedicated legal or customer-support email address has not yet been designated. Until one is available, use the telephone number or mailing address above for administrative inquiries. For medical questions, contact your treating provider or dispensing pharmacy through the channels provided to you. For emergencies, call 911.
+For administrative inquiries, use the telephone number, email address, or mailing address above. Do not send sensitive medical information by ordinary email. For medical questions, contact your treating provider or dispensing pharmacy through the channels provided to you. For emergencies, call 911.
