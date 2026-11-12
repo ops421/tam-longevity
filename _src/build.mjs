@@ -43,8 +43,9 @@ const plans = (p) => {
   return p.pricing.map((x) => ({ ...x, save: (base - x.perMonth) * x.months }));
 };
 const lowest = (p) => Math.min(...p.pricing.map((x) => x.perMonth));
-const cta = (r, label = site.assessmentLabel, cls = '') =>
-  `<a class="btn btn-gold ${cls}" href="${r}${site.assessmentUrl}">${label}${icon('arrow')}</a>`;
+// url: a product's own intake form (absolute https link); defaults to the site's assessment page.
+const cta = (r, label = site.assessmentLabel, cls = '', url = '') =>
+  `<a class="btn btn-gold ${cls}" href="${url || r + site.assessmentUrl}">${label}${icon('arrow')}</a>`;
 const write = (rel, html) => {
   const out = path.join(ROOT, rel);
   fs.mkdirSync(path.dirname(out), { recursive: true });
@@ -120,13 +121,13 @@ function waves() {
 </svg>`;
 }
 
-function ctaBand(r, title, sub, label, fine = '') {
+function ctaBand(r, title, sub, label, fine = '', url = '') {
   return `<section class="cta-band">
   ${waves()}
   <div class="wrap cta-inner reveal">
     <h2>${title}</h2>
     <p>${sub}</p>
-    ${cta(r, label)}
+    ${cta(r, label, '', url)}
     ${fine ? `<p class="cta-fine">${fine}</p>` : ''}
   </div>
 </section>`;
@@ -270,7 +271,7 @@ function productPage(p) {
       <ul class="pricing" aria-label="Pricing">
         ${priceCells}
       </ul>
-      <div class="hero-cta">${cta('../')}<p class="price-note">${site.pricingNote}</p></div>
+      <div class="hero-cta">${cta('../', site.assessmentLabel, '', p.assessmentUrl)}<p class="price-note">${site.pricingNote}</p></div>
       <p class="elig-note">${p.eligibilityNote}</p>
     </div>
   </div>
@@ -344,7 +345,7 @@ ${howItWorks(p.steps)}
   </div>
 </section>
 
-${ctaBand('../', 'Your Care Starts Here.', p.ctaSub, site.assessmentLabel, 'Prescription eligibility and medication availability are subject to medical evaluation and applicable law.')}
+${ctaBand('../', 'Your Care Starts Here.', p.ctaSub, site.assessmentLabel, 'Prescription eligibility and medication availability are subject to medical evaluation and applicable law.', p.assessmentUrl)}
 `;
   const tray = `<aside class="isi-tray" id="isi-tray" aria-label="Important Safety Information summary">
   <button class="isi-tray-toggle" aria-expanded="false" aria-controls="isi-tray-body"><span><strong>Important Safety Information</strong><em>${p.fullName} is not FDA-approved. Boxed warning: risk of thyroid C-cell tumors.</em></span>${icon('chevron')}</button>

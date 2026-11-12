@@ -127,7 +127,8 @@
       "Your provider and dispensing pharmacy will supply instructions specific to your prescription, including dose, concentration, injection technique, and schedule.",
       "Compounded products may have different concentrations. Always follow the exact instructions on your prescription label. Do not substitute syringe units for milligrams without confirming the conversion with your pharmacist."
     ],
-    "ctaSub": "Complete your online medical assessment to explore your treatment options with a licensed healthcare provider."
+    "ctaSub": "Complete your online medical assessment to explore your treatment options with a licensed healthcare provider.",
+    "assessmentUrl": "https://app.tamlongevity.com/f/glp-1-intake-form"
   },
   {
     "slug": "tirzepatide",
