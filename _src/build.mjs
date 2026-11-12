@@ -488,9 +488,11 @@ const soon = (what) => `<div class="placeholder"><p>${what}</p></div>`;
 homePage();
 products.forEach(productPage);
 simplePage('get-started', 'Online Assessment', 'Get Started',
-  `<p class="lead">Our secure online health assessment is being finalized and will open here soon.</p>
-    <p>When it opens, you will answer questions about your medical history, current medications, and health goals. A licensed healthcare provider will review your information and determine whether treatment is appropriate.</p>
-    <div class="chooser">${products.map((p) => `<a class="chooser-item" href="../${p.slug}/"><span>${p.fullName}</span>${icon('arrow')}</a>`).join('')}</div>`,
+  // Each treatment opens its own intake form when it has one, otherwise its product page.
+  `<p class="lead">Choose a treatment below to start your secure online health assessment.</p>
+    <p>You will answer questions about your medical history, current medications, and health goals. A licensed healthcare provider will review your information and determine whether treatment is appropriate.</p>
+    <div class="chooser">${products.map((p) => `<a class="chooser-item" href="${p.assessmentUrl || `../${p.slug}/`}"><span>${p.fullName}</span>${icon('arrow')}</a>`).join('')}</div>
+    <p class="chooser-more">Want to learn more first? Read about ${products.map((p) => `<a href="../${p.slug}/">${p.fullName.toLowerCase()}</a>`).join(' and ')}.</p>`,
   'Start your TAM Longevity online health assessment.');
 simplePage('about', 'About TAM Longevity', 'About',
   `<p class="lead">TAM Longevity is an online healthcare platform that connects patients with licensed medical providers for personalized medical evaluations, treatment options, and ongoing care.</p>

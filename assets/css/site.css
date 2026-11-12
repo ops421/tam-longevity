@@ -354,3 +354,4 @@ body:has(.isi-tray) .site-footer { padding-bottom: 96px; }
 .draft-banner strong { display: inline-block; font: 800 .75rem/1 var(--display); letter-spacing: .16em; text-transform: uppercase; background: #d9a21b; color: #111; padding: 6px 10px; border-radius: 6px; margin-bottom: 8px; }
 .draft-banner p { margin: 0; font-size: .92rem; }
 mark.draft-note { display: block; background: #fff3c4; border-left: 3px solid #d9a21b; color: #4a3800; padding: 8px 12px; margin: 10px 0; font-size: .85rem; border-radius: 4px; }
+.chooser-more { margin-top: 18px; font-size: .95rem; }
