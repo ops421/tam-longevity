@@ -256,6 +256,7 @@
       "Your provider and dispensing pharmacy will provide instructions specific to your prescription.",
       "Because compounded products may differ in concentration, carefully verify the prescribed dose and injection volume before administration. Contact your pharmacist if you have questions about syringe markings or dosage instructions."
     ],
-    "ctaSub": "Complete your online medical assessment to explore treatment options with a licensed healthcare provider."
+    "ctaSub": "Complete your online medical assessment to explore treatment options with a licensed healthcare provider.",
+    "assessmentUrl": "https://app.tamlongevity.com/f/glp-1-intake-form"
   }
 ]
