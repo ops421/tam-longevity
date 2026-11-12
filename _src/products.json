@@ -128,7 +128,8 @@
       "Compounded products may have different concentrations. Always follow the exact instructions on your prescription label. Do not substitute syringe units for milligrams without confirming the conversion with your pharmacist."
     ],
     "ctaSub": "Complete your online medical assessment to explore your treatment options with a licensed healthcare provider.",
-    "assessmentUrl": "https://app.tamlongevity.com/f/glp-1-intake-form"
+    "assessmentUrl": "https://app.tamlongevity.com/f/glp-1-intake-form",
+    "chooserLabel": "Start Semaglutide Online Assessment"
   },
   {
     "slug": "tirzepatide",
@@ -257,6 +258,7 @@
       "Because compounded products may differ in concentration, carefully verify the prescribed dose and injection volume before administration. Contact your pharmacist if you have questions about syringe markings or dosage instructions."
     ],
     "ctaSub": "Complete your online medical assessment to explore treatment options with a licensed healthcare provider.",
-    "assessmentUrl": "https://app.tamlongevity.com/f/glp-1-intake-form"
+    "assessmentUrl": "https://app.tamlongevity.com/f/glp-1-intake-form",
+    "chooserLabel": "Start Tirzepatide Online Assessment"
   }
 ]
