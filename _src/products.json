@@ -259,6 +259,7 @@
     ],
     "ctaSub": "Complete your online medical assessment to explore treatment options with a licensed healthcare provider.",
     "assessmentUrl": "https://app.tamlongevity.com/f/glp-1-intake-form",
-    "chooserLabel": "Start Tirzepatide Online Assessment"
+    "chooserLabel": "Start Tirzepatide Online Assessment",
+    "chooserUrl": "https://app.tamlongevity.com/f/tesamorelin-intake-form"
   }
 ]

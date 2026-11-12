@@ -488,10 +488,10 @@ const soon = (what) => `<div class="placeholder"><p>${what}</p></div>`;
 homePage();
 products.forEach(productPage);
 simplePage('get-started', 'Online Assessment', 'Get Started',
-  // Each treatment opens its own intake form when it has one, otherwise its product page.
+  // Each treatment opens its own intake form when it has one (chooserUrl overrides it on this page only), otherwise its product page.
   `<p class="lead">Choose a treatment below to start your secure online health assessment.</p>
     <p>You will answer questions about your medical history, current medications, and health goals. A licensed healthcare provider will review your information and determine whether treatment is appropriate.</p>
-    <div class="chooser">${products.map((p) => `<a class="chooser-item" href="${p.assessmentUrl || `../${p.slug}/`}"><span>${p.chooserLabel || p.fullName}</span>${icon('arrow')}</a>`).join('')}</div>
+    <div class="chooser">${products.map((p) => `<a class="chooser-item" href="${p.chooserUrl || p.assessmentUrl || `../${p.slug}/`}"><span>${p.chooserLabel || p.fullName}</span>${icon('arrow')}</a>`).join('')}</div>
     <p class="chooser-more">Want to learn more first? Read about ${products.map((p) => `<a href="../${p.slug}/">${p.fullName.toLowerCase()}</a>`).join(' and ')}.</p>`,
   'Start your TAM Longevity online health assessment.');
 simplePage('about', 'About TAM Longevity', 'About',
